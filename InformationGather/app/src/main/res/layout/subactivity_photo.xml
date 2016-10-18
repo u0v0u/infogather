@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/button_photoadd">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/button_addpeople"
+                android:layout_alignRight="@+id/button_addpeople"
+                android:layout_alignEnd="@+id/button_addpeople"
+                android:layout_marginRight="130dp"
+                android:layout_marginEnd="130dp"
+                android:layout_marginTop="11dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:text="UPLOAD"
+        android:layout_height="50dp"
+        android:layout_marginBottom="61dp"
+        android:id="@+id/button_photoupload"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp" />
+
+    <Button
+        android:text="SAVE"
+        android:layout_width="200dp"
+        android:id="@+id/button_photousave"
+        android:layout_marginBottom="11dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="50dp" />
+
+    <Button
+        android:text="ADD PHOTO"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/button_photoupload"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button_photoadd" />
+
+</RelativeLayout>

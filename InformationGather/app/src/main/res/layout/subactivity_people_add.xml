@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1000dp">
+
+            <TextView
+                android:text="Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="18dp"
+                android:id="@+id/textView26"
+                android:textSize="20sp"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:text="Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="18dp"
+                android:id="@+id/textView27"
+                android:textSize="20sp"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:text="DOB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView28"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="20sp"
+                android:layout_alignBaseline="@+id/button16"
+                android:layout_alignBottom="@+id/button16"
+                android:layout_alignLeft="@+id/textView26"
+                android:layout_alignStart="@+id/textView26" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText8"
+                android:layout_marginLeft="26dp"
+                android:layout_marginStart="26dp"
+                android:layout_alignBaseline="@+id/textView26"
+                android:layout_alignBottom="@+id/textView26"
+                android:layout_toRightOf="@+id/textView26"
+                android:layout_toEndOf="@+id/textView26" />
+
+            <Button
+                android:text="Select date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:id="@+id/button16"
+                android:elevation="0dp"
+                android:layout_below="@+id/editText8"
+                android:layout_toRightOf="@+id/textView26"
+                android:layout_toEndOf="@+id/textView26"
+                android:layout_marginLeft="14dp"
+                android:layout_marginStart="14dp" />
+
+            <TextView
+                android:text="Sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView29"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="20sp"
+                android:layout_alignBaseline="@+id/button16"
+                android:layout_alignBottom="@+id/button16"
+                android:layout_toRightOf="@+id/button16"
+                android:layout_toEndOf="@+id/button16"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp" />
+
+            <Spinner
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner2"
+                android:layout_width="70dp"
+                android:layout_alignTop="@+id/textView29"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="18dp"
+                android:layout_marginEnd="18dp" />
+
+            <TextView
+                android:text="Skin Condition:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="37dp"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="136dp"
+                android:id="@+id/textView30"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:text="Warm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox"
+                android:layout_below="@+id/textView30"
+                android:layout_alignLeft="@+id/textView30"
+                android:layout_alignStart="@+id/textView30"
+                android:fontFamily="sans-serif" />
+
+            <CheckBox
+                android:text="Moist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox4"
+                android:layout_alignBaseline="@+id/checkBox3"
+                android:layout_alignBottom="@+id/checkBox3"
+                android:layout_alignRight="@+id/editText8"
+                android:layout_alignEnd="@+id/editText8" />
+
+            <CheckBox
+                android:text="Dry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox3"
+                android:layout_alignBaseline="@+id/checkBox2"
+                android:layout_alignBottom="@+id/checkBox2"
+                android:layout_toLeftOf="@+id/checkBox4"
+                android:layout_toStartOf="@+id/checkBox4"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp" />
+
+            <CheckBox
+                android:text="Cold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox2"
+                android:layout_below="@+id/textView30"
+                android:layout_alignLeft="@+id/editText8"
+                android:layout_alignStart="@+id/editText8" />
+
+            <CheckBox
+                android:text="Flush"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox5"
+                android:layout_below="@+id/checkBox"
+                android:layout_alignLeft="@+id/textView28"
+                android:layout_alignStart="@+id/textView28" />
+
+            <CheckBox
+                android:text="Pale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox6"
+                android:layout_below="@+id/checkBox2"
+                android:layout_alignLeft="@+id/checkBox2"
+                android:layout_alignStart="@+id/checkBox2" />
+
+            <TextView
+                android:text="Eyes:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView32"
+                android:layout_marginTop="21dp"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="20sp"
+                android:layout_below="@+id/checkBox5"
+                android:layout_alignLeft="@+id/checkBox"
+                android:layout_alignStart="@+id/checkBox" />
+
+            <CheckBox
+                android:text="Perrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox9"
+                android:layout_below="@+id/textView32"
+                android:layout_alignLeft="@+id/checkBox5"
+                android:layout_alignStart="@+id/checkBox5" />
+
+            <CheckBox
+                android:text="Constricted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox10"
+                android:layout_above="@+id/checkBox12"
+                android:layout_centerHorizontal="true" />
+
+            <CheckBox
+                android:text="Non-reactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox13"
+                android:layout_below="@+id/checkBox10"
+                android:layout_alignLeft="@+id/checkBox10"
+                android:layout_alignStart="@+id/checkBox10" />
+
+            <CheckBox
+                android:text="Dilated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox12"
+                android:layout_below="@+id/checkBox9"
+                android:layout_alignLeft="@+id/textView32"
+                android:layout_alignStart="@+id/textView32" />
+
+            <TextView
+                android:text="O2 Given"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:id="@+id/textView33"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="20sp"
+                android:layout_below="@+id/checkBox12"
+                android:layout_alignLeft="@+id/checkBox12"
+                android:layout_alignStart="@+id/checkBox12" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/editText10"
+                android:layout_alignBaseline="@+id/textView33"
+                android:layout_alignBottom="@+id/textView33"
+                android:layout_alignLeft="@+id/checkBox13"
+                android:layout_alignStart="@+id/checkBox13"
+                android:layout_alignRight="@+id/checkBox4"
+                android:layout_alignEnd="@+id/checkBox4" />
+
+            <TextView
+                android:text="Pulse Rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView34"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="20sp"
+                android:layout_marginTop="13dp"
+                android:layout_below="@+id/editText10"
+                android:layout_alignLeft="@+id/checkBox9"
+                android:layout_alignStart="@+id/checkBox9" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText13"
+                android:layout_alignBaseline="@+id/textView34"
+                android:layout_alignBottom="@+id/textView34"
+                android:layout_alignLeft="@+id/editText10"
+                android:layout_alignStart="@+id/editText10"
+                android:layout_alignRight="@+id/editText10"
+                android:layout_alignEnd="@+id/editText10" />
+
+            <TextView
+                android:text="Heart Rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/textView35"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="20sp"
+                android:layout_below="@+id/editText13"
+                android:layout_alignLeft="@+id/textView34"
+                android:layout_alignStart="@+id/textView34" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText15"
+                android:layout_alignBaseline="@+id/textView35"
+                android:layout_alignBottom="@+id/textView35"
+                android:layout_alignLeft="@+id/editText13"
+                android:layout_alignStart="@+id/editText13"
+                android:layout_alignRight="@+id/editText13"
+                android:layout_alignEnd="@+id/editText13" />
+
+            <Button
+                android:text="Clear"
+                android:layout_height="wrap_content"
+                android:id="@+id/button18"
+                android:layout_below="@+id/editText15"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:layout_width="150dp" />
+
+            <Button
+                android:text="save"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button19"
+                android:layout_below="@+id/button18"
+                android:layout_alignLeft="@+id/checkBox6"
+                android:layout_alignStart="@+id/checkBox6" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

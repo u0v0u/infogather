@@ -26,6 +26,20 @@
         <activity
             android:name=".EMTActivity"
             android:label="EMT" />
+        <activity
+            android:name=".ButtonsInReport.DateActivity"
+            android:label="EMT" />
+        <activity
+            android:name=".ButtonsInReport.TimeActivity"
+            android:label="EMT" />
+        <activity
+            android:name=".ButtonsInReport.AudioActivity"
+            android:label="EMT" />
+        <activity
+            android:name=".ButtonsInReport.DateActivity"
+            android:label="EMT" />
+        <uses-permission android:name="android.permission.INTERNET"/>
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     </application>
 
 </manifest>
