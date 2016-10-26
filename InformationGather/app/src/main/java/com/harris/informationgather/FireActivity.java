@@ -11,8 +11,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.harris.informationgather.ButtonsInReport.AudioActivity;
 import com.harris.informationgather.ButtonsInReport.DateActivity;
+import com.harris.informationgather.ButtonsInReport.EvaActivity;
+import com.harris.informationgather.ButtonsInReport.IActionActivity;
 import com.harris.informationgather.ButtonsInReport.PeopleActivity;
+import com.harris.informationgather.ButtonsInReport.PhotoActivity;
+import com.harris.informationgather.ButtonsInReport.RActionActivity;
 import com.harris.informationgather.ButtonsInReport.TimeActivity;
 
 import java.util.Calendar;
@@ -66,6 +71,7 @@ public class FireActivity  extends AppCompatActivity {
         datePickButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), DateActivity.class);
+                myIntent.putExtra("caller", "Fire");
                 startActivityForResult(myIntent, 0);
             }
         });
@@ -73,6 +79,7 @@ public class FireActivity  extends AppCompatActivity {
         timePickButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), TimeActivity.class);
+                myIntent.putExtra("caller", "Fire");
                 startActivityForResult(myIntent, 0);
             }
         });
@@ -80,41 +87,47 @@ public class FireActivity  extends AppCompatActivity {
         peopleButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), PeopleActivity.class);
+                myIntent.putExtra("caller", "Fire");
                 startActivityForResult(myIntent, 0);
             }
         });
 
         photoButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), TimeActivity.class);
+                Intent myIntent = new Intent(view.getContext(), PhotoActivity.class);
+                myIntent.putExtra("caller", "Fire");
                 startActivityForResult(myIntent, 0);
             }
         });
 
         audioButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), TimeActivity.class);
+                Intent myIntent = new Intent(view.getContext(), AudioActivity.class);
+                myIntent.putExtra("caller", "Fire");
                 startActivityForResult(myIntent, 0);
             }
         });
 
-        timePickButton.setOnClickListener(new View.OnClickListener() {
+        iActionButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), TimeActivity.class);
+                Intent myIntent = new Intent(view.getContext(), IActionActivity.class);
+                myIntent.putExtra("caller", "Fire");
                 startActivityForResult(myIntent, 0);
             }
         });
 
-        timePickButton.setOnClickListener(new View.OnClickListener() {
+        rActionButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), TimeActivity.class);
+                Intent myIntent = new Intent(view.getContext(), RActionActivity.class);
+                myIntent.putExtra("caller", "Fire");
                 startActivityForResult(myIntent, 0);
             }
         });
 
-        timePickButton.setOnClickListener(new View.OnClickListener() {
+        evaButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), TimeActivity.class);
+                Intent myIntent = new Intent(view.getContext(), EvaActivity.class);
+                myIntent.putExtra("caller", "Fire");
                 startActivityForResult(myIntent, 0);
             }
         });

@@ -67,7 +67,7 @@ public class LoginActivity extends AppCompatActivity implements OnItemSelectedLi
                 startActivityForResult(myIntent, 0);
             }
         });
-
+/*
         mAuthContext = new AuthenticationContext(LoginActivity.this, AUTHORITY_URL, true);
         mAuthContext.acquireToken(
                 LoginActivity.this,
@@ -81,7 +81,7 @@ public class LoginActivity extends AppCompatActivity implements OnItemSelectedLi
                     @Override
                     public void onError(Exception e)
                     {
-                        Log.e(AUTH_TAG, "Error getting token: " + e.toString());
+                        //Log.e(AUTH_TAG, "Error getting token: " + e.toString());
                     }
 
                     @Override
@@ -107,6 +107,7 @@ public class LoginActivity extends AppCompatActivity implements OnItemSelectedLi
                         }
                     }
                 });
+            */
     }
 
     @Override

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.harris.informationgather">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -28,18 +30,34 @@
             android:label="EMT" />
         <activity
             android:name=".ButtonsInReport.DateActivity"
-            android:label="EMT" />
+            android:label="Date" />
         <activity
             android:name=".ButtonsInReport.TimeActivity"
-            android:label="EMT" />
+            android:label="Time" />
         <activity
             android:name=".ButtonsInReport.AudioActivity"
-            android:label="EMT" />
+            android:label="Audio" />
         <activity
-            android:name=".ButtonsInReport.DateActivity"
-            android:label="EMT" />
-        <uses-permission android:name="android.permission.INTERNET"/>
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+            android:name="com.microsoft.aad.adal.AuthenticationActivity"
+            android:label="NS" >
+        </activity>
+        <activity
+            android:name=".ButtonsInReport.PeopleActivity"
+            android:label="People" />
+        <activity
+            android:name=".ButtonsInReport.EvaActivity"
+            android:label="Evaluation" />
+        <activity
+            android:name=".ButtonsInReport.IActionActivity"
+            android:label="Initial Action" />
+        <activity
+            android:name=".ButtonsInReport.PhotoActivity"
+            android:label="Photo" />
+        <activity
+            android:name=".ButtonsInReport.RActionActivity"
+            android:label="Respond to Action" />
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 </manifest>

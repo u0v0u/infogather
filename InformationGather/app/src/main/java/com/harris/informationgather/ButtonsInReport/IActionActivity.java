@@ -4,19 +4,28 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
 
-import com.harris.informationgather.FireActivity;
 import com.harris.informationgather.R;
 
 /**
  * Created by myiee on 10/9/2016.
  */
 
-public class AudioActivity extends AppCompatActivity {
+public class IActionActivity extends AppCompatActivity {
+
+    private Button iSave;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.subactivity_audio);
+        setContentView(R.layout.subactivity_iaction);
+
+        iSave = (Button) findViewById(R.id.button_iactionsave);
+
+        iSave.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                IActionActivity.super.onBackPressed();
+            }
+        });
     }
 }

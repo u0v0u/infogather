@@ -8,23 +8,23 @@ import android.widget.Button;
 import com.harris.informationgather.R;
 
 /**
- * Created by myiee on 10/9/2016.
+ * Created by Shao on 10/25/2016.
  */
 
-public class RActionActivity  extends AppCompatActivity {
+public class EvaActivity extends AppCompatActivity {
 
-    private Button rSave;
+    private Button eSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.subactivity_raction);
+        setContentView(R.layout.subactivity_evaluation);
 
-        rSave = (Button) findViewById(R.id.button_ractionsave);
+        eSave = (Button) findViewById(R.id.button_evasave);
 
-        rSave.setOnClickListener(new View.OnClickListener() {
+        eSave.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                RActionActivity.super.onBackPressed();
+                EvaActivity.super.onBackPressed();
             }
         });
     }

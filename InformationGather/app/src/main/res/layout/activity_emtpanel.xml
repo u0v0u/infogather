@@ -1,6 +1,479 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:orientation="vertical" android:layout_width="match_parent"
-android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:stretchColumns="1"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:text="Create New Incident"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/emt_title"
+                android:layout_weight="0.02"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.02"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:text="Incident No."
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/emt_incident_t"
+                    android:layout_marginLeft="25dp"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.02">
+
+                    <Button
+                        android:text="Get incident"
+                        android:layout_width="match_parent"
+                        android:id="@+id/emt_incident_b"
+                        android:layout_marginRight="50dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/emt_incident_check"
+                        android:layout_marginRight="15dp"
+                        android:layout_alignParentRight="true"
+                        android:height="35dp"
+                        android:background="@mipmap/check_mark"
+                        android:layout_marginTop="5dp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.02">
+
+                <TextView
+                    android:text="Date"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/emt_date_t"
+                    android:layout_marginLeft="25dp"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.02">
+
+                    <Button
+                        android:text="Select Date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/emt_date_b"
+                        android:layout_marginRight="50dp" />
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/emt_date_check"
+                        android:layout_marginRight="15dp"
+                        android:layout_alignParentRight="true"
+                        android:height="35dp"
+                        android:background="@mipmap/check_mark"
+                        android:layout_marginTop="5dp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.02">
+
+                <TextView
+                    android:text="Time"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/emt_time_t"
+                    android:layout_marginLeft="25dp"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.02">
+
+                    <Button
+                        android:text="Select time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/emt_time_b"
+                        android:layout_weight="1"
+                        android:layout_marginRight="50dp" />
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/emt_time_check"
+                        android:layout_marginRight="15dp"
+                        android:layout_alignParentRight="true"
+                        android:height="35dp"
+                        android:background="@mipmap/check_mark"
+                        android:layout_marginTop="5dp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.02">
+
+                <TextView
+                    android:text="Patient Information"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/emt_patinfo_t"
+                    android:layout_marginLeft="25dp"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.02">
+
+                    <Button
+                        android:text="Add People"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/emt_patinfo_b"
+                        android:layout_weight="1"
+                        android:layout_marginRight="50dp" />
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/emt_ppl_check"
+                        android:layout_marginRight="15dp"
+                        android:layout_alignParentRight="true"
+                        android:height="35dp"
+                        android:background="@mipmap/check_mark"
+                        android:layout_marginTop="5dp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.02">
+
+                <TextView
+                    android:text="Photo"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/emt_photo_t"
+                    android:layout_marginLeft="25dp"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.02">
+
+                    <Button
+                        android:text="upload photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/emt_photo_b"
+                        android:layout_weight="1"
+                        android:layout_marginRight="50dp" />
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/emt_photo_check"
+                        android:layout_marginRight="15dp"
+                        android:height="35dp"
+                        android:background="@mipmap/check_mark"
+                        android:visibility="invisible"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="15dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:text="GET LOCATION"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:id="@+id/emt_getlocation_b"
+                android:elevation="0dp"
+                android:layout_weight="0.02"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:text="Save Session"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:id="@+id/emt_save_b"
+                android:elevation="0dp"
+                android:layout_weight="0.02"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:stretchColumns="1"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:text="Create New Incident"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9"
+            android:layout_weight="0.02"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.02"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:text="Incident No."
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView10"
+                android:layout_marginLeft="25dp"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.02">
+
+            <TextView
+                android:text="Date"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView13"
+                android:layout_marginLeft="25dp"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.02">
+
+            <TextView
+                android:text="Time"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView20"
+                android:layout_marginLeft="25dp"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.02">
+
+            <TextView
+                android:text="Involved People"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView21"
+                android:layout_marginLeft="25dp"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.02">
+
+            <TextView
+                android:text="Photo"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView22"
+                android:layout_marginLeft="25dp"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.02">
+
+            <TextView
+                android:text="Audio"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView23"
+                android:layout_marginLeft="25dp"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.02">
+
+            <TextView
+                android:text="Initial Action"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView24"
+                android:layout_marginLeft="25dp"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.02">
+
+            <TextView
+                android:text="Respond to Action"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView25"
+                android:layout_marginLeft="25dp"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.02">
+
+            <TextView
+                android:text="Evaluation"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView15"
+                android:layout_marginLeft="25dp"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:text="Select time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button52"
+        android:layout_weight="1"
+        android:layout_marginRight="50dp" />
+
+    <Button
+        android:text="Edit people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button53"
+        android:layout_weight="1"
+        android:layout_marginRight="50dp" />
+
+    <Button
+        android:text="upload photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button54"
+        android:layout_weight="1"
+        android:layout_marginRight="50dp" />
+
+    <Button
+        android:text="upload audio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button55"
+        android:layout_weight="1"
+        android:layout_marginRight="50dp" />
+
+    <Button
+        android:text="view and edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button56"
+        android:layout_weight="1"
+        android:layout_marginRight="50dp" />
+
+    <Button
+        android:text="view and edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button57"
+        android:layout_weight="1"
+        android:layout_marginRight="50dp" />
+
+    <Button
+        android:text="view and edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button58"
+        android:layout_weight="1"
+        android:layout_marginRight="50dp" />
 
 </LinearLayout>
