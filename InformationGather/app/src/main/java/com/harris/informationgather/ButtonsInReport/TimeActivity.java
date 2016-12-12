@@ -23,7 +23,7 @@ import java.util.Calendar;
 public class TimeActivity extends AppCompatActivity {
 
     private SimpleDateFormat simpleDateFormat;
-    private String time, caller;
+    private String time, caller, pickedTime;
     private Calendar calander;
     private Button timePickerClickCon, timeGetCurrent;
 
@@ -45,39 +45,48 @@ public class TimeActivity extends AppCompatActivity {
         if (caller.equals("Police")) {
             timePickerClickCon.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
-                    PoliceActivity.timePickButton.setText(timePicker.getHour() + ":" + timePicker.getMinute());
+                    pickedTime = timePicker.getHour() + ":" + timePicker.getMinute();
+                    PoliceActivity.timePickButton.setText(pickedTime);
+                    PoliceActivity.time = pickedTime;
                     TimeActivity.super.onBackPressed();
                 }
             });
             timeGetCurrent.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
                     PoliceActivity.timePickButton.setText(time);
+                    PoliceActivity.time = time;
                     TimeActivity.super.onBackPressed();
                 }
             });
         } else if (caller.equals("Fire")) {
             timePickerClickCon.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
-                    FireActivity.timePickButton.setText(timePicker.getHour() + ":" + timePicker.getMinute());
+                    pickedTime = timePicker.getHour() + ":" + timePicker.getMinute();
+                    FireActivity.timePickButton.setText(pickedTime);
+                    //FireActivity.time = pickedTime;
                     TimeActivity.super.onBackPressed();
                 }
             });
             timeGetCurrent.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
                     FireActivity.timePickButton.setText(time);
+                    //FireActivity.time = time;
                     TimeActivity.super.onBackPressed();
                 }
             });
         } else if (caller.equals("EMT")) {
             timePickerClickCon.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
-                    EMTActivity.timePickButton.setText(timePicker.getHour() + ":" + timePicker.getMinute());
+                    pickedTime = timePicker.getHour() + ":" + timePicker.getMinute();
+                    EMTActivity.timePickButton.setText(pickedTime);
+                    //EMTActivity.time = pickedTime;
                     TimeActivity.super.onBackPressed();
                 }
             });
             timeGetCurrent.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
                     EMTActivity.timePickButton.setText(time);
+                    //EMTActivity.time = time;
                     TimeActivity.super.onBackPressed();
                 }
             });

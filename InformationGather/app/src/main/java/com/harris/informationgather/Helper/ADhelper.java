@@ -25,7 +25,7 @@ public class ADhelper {
 
 
     public static void authenticate() {
-        mAuthContext = new AuthenticationContext(LoginActivity.context, AUTHORITY_URL, true);
+/*        mAuthContext = new AuthenticationContext(LoginActivity.context, AUTHORITY_URL, true);
         mAuthContext.acquireToken(
                 (Activity) LoginActivity.context,
                 CLIENT_ID,
@@ -54,7 +54,7 @@ public class ADhelper {
                             Log.e(AUTH_TAG, "Error: token came back empty");
                         }
                     }
-                });
+                });*/
     }
 
     private static void updateLoggedInUI(String firstName, String lastName)

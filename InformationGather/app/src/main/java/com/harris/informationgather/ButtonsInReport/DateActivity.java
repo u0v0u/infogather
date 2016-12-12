@@ -18,7 +18,7 @@ import com.harris.informationgather.R;
 
 public class DateActivity extends AppCompatActivity {
 
-    private String caller;
+    private String caller, date;
     private Button datePickClickCon;
     public static DatePicker datePicker;
 
@@ -36,7 +36,9 @@ public class DateActivity extends AppCompatActivity {
         if (caller.equals("Police")) {
             datePickClickCon.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
-                    PoliceActivity.datePickButton.setText(datePicker.getYear() + "." + datePicker.getMonth() + "." + datePicker.getDayOfMonth());
+                    date = datePicker.getYear() + "." + datePicker.getMonth() + "." + datePicker.getDayOfMonth();
+                    PoliceActivity.datePickButton.setText(date);
+                    PoliceActivity.date = date;
                     //EMTActivity.tv2.setVisibility(View.VISIBLE);
                     DateActivity.super.onBackPressed();
                 }
@@ -44,7 +46,9 @@ public class DateActivity extends AppCompatActivity {
         } else if (caller.equals("Fire")) {
             datePickClickCon.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
-                    FireActivity.datePickButton.setText(datePicker.getYear() + "." + datePicker.getMonth() + "." + datePicker.getDayOfMonth());
+                    date = datePicker.getYear() + "." + datePicker.getMonth() + "." + datePicker.getDayOfMonth();
+                    FireActivity.datePickButton.setText(date);
+                    //PoliceActivity.date = date;
                     //EMTActivity.tv2.setVisibility(View.VISIBLE);
                     DateActivity.super.onBackPressed();
                 }
@@ -52,8 +56,18 @@ public class DateActivity extends AppCompatActivity {
         } else if (caller.equals("EMT")) {
             datePickClickCon.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
-                    EMTActivity.datePickButton.setText(datePicker.getYear() + "." + datePicker.getMonth() + "." + datePicker.getDayOfMonth());
+                    date = datePicker.getYear() + "." + datePicker.getMonth() + "." + datePicker.getDayOfMonth();
+                    EMTActivity.datePickButton.setText(date);
+                    //PoliceActivity.date = date;
                     //EMTActivity.tv2.setVisibility(View.VISIBLE);
+                    DateActivity.super.onBackPressed();
+                }
+            });
+        } else if (caller.equals("PplAddActivity")) {
+            datePickClickCon.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    date = datePicker.getYear() + "." + datePicker.getMonth() + "." + datePicker.getDayOfMonth();
+                    PplAddActivity.date.setText(date);
                     DateActivity.super.onBackPressed();
                 }
             });

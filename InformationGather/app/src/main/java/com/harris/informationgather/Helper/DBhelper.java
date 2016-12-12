@@ -1,5 +1,6 @@
 package com.harris.informationgather.Helper;
 
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import java.net.MalformedURLException;
@@ -28,6 +29,8 @@ import com.google.common.util.concurrent.SettableFuture;
 import com.harris.informationgather.Data.IncidentE;
 import com.harris.informationgather.Data.IncidentF;
 import com.harris.informationgather.Data.IncidentP;
+import com.harris.informationgather.Data.SigninItem;
+import com.harris.informationgather.Data.TempClass;
 import com.harris.informationgather.LoginActivity;
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.http.NextServiceFilterCallback;
@@ -56,7 +59,8 @@ public class DBhelper {
     private MobileServiceTable<IncidentE> EMTTable;
     private MobileServiceTable<IncidentF> FireTable;
     private MobileServiceTable<IncidentP> PoliceTable;
-    private MobileServiceClient mClient;
+    private MobileServiceTable<TempClass> TempTable;
+    private static MobileServiceClient mClient;
 
     //Offline Sync
     /**
@@ -88,15 +92,19 @@ public class DBhelper {
                     FireTable = mClient.getTable(IncidentF.class);
                 case "Police":
                     PoliceTable = mClient.getTable(IncidentP.class);
+                case "try":
+                    TempTable = mClient.getTable(TempClass.class);
             }
 
             // Offline Sync
             //mToDoTable = mClient.getSyncTable("ToDoItem", ToDoItem.class);
+            //TempTable = mClient.getSyncTable("TempTable", TempClass.class);
 
             //Init local storage
             initLocalStore(i).get();
 
         } catch (Exception e){
+            Log.i("_______",e.toString());
         }
     }
 
@@ -125,7 +133,7 @@ public class DBhelper {
         runAsyncTask(task);
     }
 
-    public void addIncident(final String i, final IncidentP P, final IncidentE E, final IncidentF F) throws ExecutionException, InterruptedException {
+    public void addIncident(final String i, final IncidentP P, final IncidentE E, final IncidentF F, final TempClass T) throws ExecutionException, InterruptedException {
         if (mClient == null) {
             return;
         }
@@ -141,8 +149,11 @@ public class DBhelper {
                             FireTable.insert(F);
                         case "Police":
                             PoliceTable.insert(P);
+                        case "try":
+                            TempTable.insert(T);
                     }
                 } catch (final Exception e) {
+
                 }
                 return null;
             }
@@ -166,6 +177,11 @@ public class DBhelper {
     private IncidentP getIncidentP(final String incidentNum) throws ExecutionException, InterruptedException {
         List<IncidentP> results = PoliceTable.where().field("incidentNum").eq(incidentNum).execute().get();
         return results.get(0);
+    }
+
+    public static String getU(final String in) throws ExecutionException, InterruptedException {
+        List<SigninItem> results = mClient.getTable(SigninItem.class).where().field("USERNAME").eq("apple").execute().get();
+        return results.get(0).Username;
     }
 
     /**
